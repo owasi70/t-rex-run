@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://xb3v41qoqvtu"]
+
+[ext_resource type="PackedScene" uid="uid://ckg42tb23g00o" path="res://scenes/bg.tscn" id="1_dydhf"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_yvayv"]
+[ext_resource type="PackedScene" uid="uid://b0bmjqfv14kko" path="res://scenes/ground.tscn" id="2_xi5rf"]
+[ext_resource type="PackedScene" uid="uid://ds4n3new8w3ww" path="res://scenes/dino.tscn" id="3_t48ya"]
+[ext_resource type="PackedScene" uid="uid://wcha4af1ulwf" path="res://scenes/barrel.tscn" id="5_rf6d6"]
+[ext_resource type="PackedScene" uid="uid://beelmnkv7n7wa" path="res://scenes/bird.tscn" id="6_6oaeu"]
+[ext_resource type="PackedScene" uid="uid://d3dnjnkupcq7r" path="res://scenes/rock.tscn" id="7_xlnnl"]
+[ext_resource type="PackedScene" uid="uid://82v4wbr5x6lr" path="res://scenes/hud.tscn" id="8_7m4sj"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_yvayv")
+
+[node name="Bg" parent="." instance=ExtResource("1_dydhf")]
+
+[node name="Dino" parent="." instance=ExtResource("3_t48ya")]
+position = Vector2(36, 526)
+
+[node name="ground" parent="." instance=ExtResource("2_xi5rf")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 320)
+scale = Vector2(1.5, 1.5)
+
+[node name="barrel" parent="." instance=ExtResource("5_rf6d6")]
+position = Vector2(384, 547)
+
+[node name="bird" parent="." instance=ExtResource("6_6oaeu")]
+position = Vector2(532, 464)
+
+[node name="rock" parent="." instance=ExtResource("7_xlnnl")]
+position = Vector2(588, 544)
+
+[node name="barrel2" parent="." instance=ExtResource("5_rf6d6")]
+position = Vector2(276, 525)
+
+[node name="barrel3" parent="." instance=ExtResource("5_rf6d6")]
+position = Vector2(743, 521)
+
+[node name="HUD" parent="." instance=ExtResource("8_7m4sj")]
